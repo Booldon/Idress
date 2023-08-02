@@ -21,6 +21,7 @@ public class Data {
     String area;
 
     Double senT;
+    Double RN1;
     String dress;
     String standardTime;
     public Data() {

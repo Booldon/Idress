@@ -46,6 +46,7 @@ public class DataService {
         setData.setArea(area);
         setData.setDress(dressTem);
         setData.setSenT(sensoryTem);
+        setData.setRN1(Double.valueOf(categoryObsrValue.get("RN1")));
         setData.setStandardTime(Now.NowTime());
 
         return setData;
