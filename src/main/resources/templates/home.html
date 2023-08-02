@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+  <title>IDRESS</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+  <div th:replace="fragments/bodyHeader :: bodyHeader" />
+  <div class="jumbotron">
+    <h1>IDRESS</h1>
+    <p>로그인 후 이용해 주세요.</p>
+    <p>
+      <a class="btn btn-lg btn-primary" href="/login">로그인</a>
+      <a class="btn btn-lg btn-success" href="/idress">Idress 실행</a>
+    </p>
+  </div>
+  <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>IDRESS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+    <div class="jumbotron">
+        <h1>IDRESS</h1>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/idress/seoul">서울</a>
+            <a class="btn btn-lg btn-secondary" href="/idress/gyeonggi">경기</a>
+        </p>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/idress/chungbuk">충북</a>
+            <a class="btn btn-lg btn-secondary" href="/idress/chungnam">충남</a>
+        </p>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/idress/jeonbuk">전북</a>
+            <a class="btn btn-lg btn-secondary" href="/idress/jeonnam">전남</a>
+        </p>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/idress/gyeongbuk">경북</a>
+            <a class="btn btn-lg btn-secondary" href="/idress/gyeongnam">경남</a>
+        </p>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/idress/gangwon">강원</a>
+            <a class="btn btn-lg btn-secondary" href="/idress/jeju">제주</a>
+        </p>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

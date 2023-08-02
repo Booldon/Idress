@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>IDRESS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+    <div class="jumbotron">
+<h1>Weather Data</h1>
+<table>
+    <tr th:each="data : ${data}">
+        <td>
+            체감온도 : <span th:text="${data.senT}" style="color: red; font-size: 20px;"></span>
+            / 기준시간 : <span th:text="${data.standardTime}" style="color: blue; font-size: 20px;"></span>
+        </td>
+        <tr th:each="data : ${data}">
+        <td>
+            <!-- 의상 이미지 표시 -->
+            <span th:if="${data.dress == 'VH'}">
+                    <img src="/images/vh_outfit.jpg" alt="VH outfit" />
+                </span>
+            <span th:if="${data.dress == 'H'}">
+                    <img src="/images/h_outfit.jpg" alt="H outfit" />
+                </span>
+            <span th:if="${data.dress == 'LH'}">
+                    <img src="/images/lh_outfit.jpg" alt="LH outfit" />
+                </span>
+            <span th:if="${data.dress == 'M'}">
+                    <img src="/images/m_outfit.jpg" alt="M outfit" />
+                </span>
+            <span th:if="${data.dress == 'LC'}">
+                    <img src="/images/lc_outfit.jpg" alt="LC outfit" />
+                </span>
+            <span th:if="${data.dress == 'C'}">
+                    <img src="/images/c_outfit.jpg" alt="C outfit" />
+                </span>
+            <span th:if="${data.dress == 'VC'}">
+                    <img src="/images/vc_outfit.jpg" alt="VC outfit" />
+                </span>
+            <!-- 더 많은 의상 이미지 추가 가능 -->
+            </tr>
+        </td>
+    </tr>
+</table>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

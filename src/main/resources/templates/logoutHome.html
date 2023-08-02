@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+  <title>IDRESS</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+  <div th:replace="fragments/bodyHeader :: bodyHeader" />
+
+  <form role="form" action="/logout" method="post">
+  <div class="jumbotron">
+    <h1>IDRESS</h1>
+    <p th:if="${member.name}">환영합니다, <span th:text="${member.name}"></span>님!</p>
+    <p>
+      <button type="submit" class="btn btn-lg btn-danger">로그아웃</button>
+      <a class="btn btn-lg btn-success" href="/idress">Idress 실행</a>
+    </p>
+  </div>
+  </form>
+  <div th:replace="fragments/footer :: footer" />
+
+</div> <!-- /container -->
+</body>
+</html>
